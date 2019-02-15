@@ -1,10 +1,9 @@
-# Data-Structure-and-Algorithms
 
-数据结构与算法
+从今天起，跨过“数据结构与算法”这道坎。
 
 ## 数据结构
 
-* [数组](https://github.com/pleuvoir/Data-Structure-and-Algorithms/docs/array.md)
+* [数组](https://github.com/pleuvoir/Data-Structure-and-Algorithms/blob/master/docs/array.md)
 * 链表
 * 栈
 * 队列
