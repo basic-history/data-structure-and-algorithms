@@ -21,8 +21,6 @@
 
 <img src="https://i.imgur.com/qWkZqa5.jpg" alt="" width="696" height="353">
 
-<center>(图片出自极客时间)<center>
-
 通过计算机的寻址公式，计算出该元素存储的内存地址 `a[i]_address = base_address + i * data_type_size`。其中 `data_type_size` 为数据类型所占的字节数，这里 int 所占字节为 4。`base_address` 为内存块的首地址 1000。
 
 ### 低效的插入和删除
