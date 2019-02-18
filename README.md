@@ -4,7 +4,7 @@
 ## 数据结构
 
 * [数组](https://github.com/pleuvoir/Data-Structure-and-Algorithms/blob/master/docs/array.md)
-* 链表
+* [链表](https://github.com/pleuvoir/Data-Structure-and-Algorithms/blob/master/docs/linkedlist.md)
 * 栈
 * 队列
 * 散列表
