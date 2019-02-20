@@ -32,14 +32,45 @@ public class SingleLinkedlist {
     }
 
 
+    // 根据值查找结点，会返回第一个先查找到的节点
+    public Node getByVal(Object o) {
+        Node p = this.head;
+        while (p.next != null && p.next.data != o) {
+            p = p.next;
+
+        }
+        return p.next;
+    }
+
+
+    // 根据下标访问节点
+    public Node getByIndex(int index) {
+
+        if (index < 0 || index > size - 1) {
+            return null;
+        }
+
+        Node p = this.head;
+
+        int pos = 0;
+        while (p.next != null && index >= pos) {
+            p = p.next;
+            pos++;
+        }
+
+        return p;
+
+    }
+
+    // 删除第一个结点
     public Object removeFirst() {
 
         Node headToUse = head;
         if (headToUse.next != null) {
-            final Object secondData = headToUse.next.data;  // 首节点后的第一个元素
+            final Object second = headToUse.next.data;  // 首节点后的第一个元素
             headToUse.next = headToUse.next.next;
 
-            return secondData;
+            return second;
         }
 
         size--;
@@ -47,14 +78,14 @@ public class SingleLinkedlist {
     }
 
 
-    public Object removeLast(){
-        if (size ==0) return null;
+    public Object removeLast() {
+        if (size == 0) return null;
 
         // 寻找尾结点
-        Node lastNode  = head;
+        Node lastNode = head;
 
-        while (lastNode .next != null) {
-            lastNode  = lastNode .next;
+        while (lastNode.next != null) {
+            lastNode = lastNode.next;
         }
 
         // 找到倒数第二个结点 设置 next 为 null
@@ -66,11 +97,10 @@ public class SingleLinkedlist {
         }
 
         prevLastNode.next = null;
-        size --;
+        size--;
 
         return lastNode.data;
     }
-
 
 
     public static class Node {

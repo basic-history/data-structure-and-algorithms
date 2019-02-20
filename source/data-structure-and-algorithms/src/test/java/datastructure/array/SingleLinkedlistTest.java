@@ -28,5 +28,16 @@ public class SingleLinkedlistTest {
 
         list.printAll();
 
+
+        SingleLinkedlist.Node oneByVal = list.getByVal(1);
+        System.out.println(oneByVal);   // null
+        SingleLinkedlist.Node threeByVal = list.getByVal(3);
+        System.out.println(threeByVal);  // Node{data=3}
+
+
+        System.out.println("list.getByIndex(0)=" + list.getByIndex(0));  // Node{data=2}
+        System.out.println("list.getByIndex(2)=" + list.getByIndex(2));  // Node{data=4}
+
+
     }
 }
