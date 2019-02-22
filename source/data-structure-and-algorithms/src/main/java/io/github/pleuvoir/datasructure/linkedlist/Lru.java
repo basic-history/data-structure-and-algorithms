@@ -45,14 +45,14 @@ public class Lru {
         // 如果是修改则考虑移动
         InnerNode old = getNodeBykey(key);
         if (old != null) {
-            if(old.next != null){  // 如果有下一个，当然也代表有上一个
+            if (old.next != null) {  // 如果有下一个，当然也代表有上一个
                 // 调整前继节点指针
                 InnerNode p = this.head;
                 while (p.next != null && p.next != old) {
                     p = p.next;
                 }
                 p.next = p.next.next;
-            }else{
+            } else {
                 // 代表此节点是末尾节点，直接修改值
                 old.data = value;
                 return;
@@ -60,7 +60,7 @@ public class Lru {
         }
 
         // 新增
-        else{
+        else {
             if (itemSize == this.capacity) { // 动态调整
                 removeFirst();
             }
@@ -81,10 +81,10 @@ public class Lru {
     /**
      * 根据 key 获取 value
      */
-    public Object get(String key){
+    public Object get(String key) {
 
         InnerNode node = getNodeBykey(key);
-        if(node == null){
+        if (node == null) {
             return null;
         }
 
@@ -93,7 +93,7 @@ public class Lru {
         // 找到前继节点移动指针，并将此节点加入最后
 
         InnerNode p = this.head;
-        while (p.next!=null && p.next!= node){
+        while (p.next != null && p.next != node) {
             p = p.next;
         }
 
@@ -149,10 +149,10 @@ public class Lru {
         itemSize--;
     }
 
-    public void printAll(){
+    public void printAll() {
         InnerNode p = this.head;
         StringBuffer sb = new StringBuffer("size=" + this.itemSize + ".  ");
-        while (p.next!=null){
+        while (p.next != null) {
             sb.append(" [key=").append(p.next.key).append(" value=" + p.next.data + "]");
             p = p.next;
         }
