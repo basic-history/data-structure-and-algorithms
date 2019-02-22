@@ -5,7 +5,7 @@
 
 * [数组](https://github.com/pleuvoir/Data-Structure-and-Algorithms/blob/master/docs/array.md)
 * [链表](https://github.com/pleuvoir/Data-Structure-and-Algorithms/blob/master/docs/linkedlist.md)
-* 栈
+* [栈](https://github.com/pleuvoir/Data-Structure-and-Algorithms/blob/master/docs/stack.md)
 * 队列
 * 散列表
 * 二叉树
