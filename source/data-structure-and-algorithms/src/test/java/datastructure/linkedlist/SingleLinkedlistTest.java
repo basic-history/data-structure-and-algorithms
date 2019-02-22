@@ -1,4 +1,4 @@
-package datastructure.array;
+package datastructure.linkedlist;
 
 import io.github.pleuvoir.datasructure.linkedlist.SingleLinkedlist;
 
