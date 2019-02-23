@@ -1,8 +1,5 @@
 package io.github.pleuvoir.datasructure.linkedlist;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 /**
  * 基于链表Lru缓存实现
  * <p>
@@ -159,11 +156,15 @@ public class Lru {
         System.out.println(sb.toString());
     }
 
-    @Data
-    @AllArgsConstructor
     private static class InnerNode {
         private String key;
         private Object data;
         private InnerNode next;
+		public InnerNode(String key, Object data, InnerNode next) {
+			super();
+			this.key = key;
+			this.data = data;
+			this.next = next;
+		}
     }
 }
