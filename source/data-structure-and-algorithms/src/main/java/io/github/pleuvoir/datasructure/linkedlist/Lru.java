@@ -154,6 +154,7 @@ public class Lru {
         if (this.itemSize == 0 || this.head.next == null) {
             return;
         }
+	    //断开连接
         this.head.next = this.head.next.next;
         itemSize--;
     }
