@@ -48,7 +48,19 @@ public class Lru {
                 while (p.next != null && p.next != old) {
                     p = p.next;
                 }
+		 //断开连接
                 p.next = p.next.next;
+		    
+	      //追加到尾部
+	       InnerNode q = this.head;
+
+		while (q.next != null) {
+		    q = q.next;
+		}
+			
+		q.next = old;
+		old.next = null;
+		old.data = value;
             } else {
                 // 代表此节点是末尾节点，直接修改值
                 old.data = value;
